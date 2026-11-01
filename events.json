@@ -1,5 +1,5 @@
 {
- "updated": 1793573358,
+ "updated": 1793575190,
  "events": [
   {
    "sport": "tennis",
@@ -7,13 +7,6 @@
    "title": "Paris Masters",
    "sub": "ATP 1000 - Paris",
    "end": 1794178740
-  },
-  {
-   "sport": "football",
-   "t": 1794135600,
-   "title": "Atletico v Barcelona",
-   "sub": "LaLiga - Metropolitano",
-   "tbc": true
   },
   {
    "sport": "padel",
@@ -55,13 +48,6 @@
    "t": 1796598000,
    "title": "Premier Padel Finals",
    "sub": "Barcelona",
-   "end": 1797202740
-  },
-  {
-   "sport": "tabletennis",
-   "t": 1796770800,
-   "title": "WTT Finals",
-   "sub": "Hong Kong",
    "end": 1797202740
   },
   {
