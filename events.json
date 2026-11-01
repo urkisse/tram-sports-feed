@@ -1,5 +1,5 @@
 {
- "updated": 1793575190,
+ "updated": 1793576365,
  "events": [
   {
    "sport": "tennis",
@@ -7,6 +7,13 @@
    "title": "Paris Masters",
    "sub": "ATP 1000 - Paris",
    "end": 1794178740
+  },
+  {
+   "sport": "padel",
+   "t": 1793574000,
+   "title": "FIP World Cup",
+   "sub": "Padel nations - Doha",
+   "end": 1794092340
   },
   {
    "sport": "padel",
