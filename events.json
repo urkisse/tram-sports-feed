@@ -1,0 +1,82 @@
+{
+ "updated": 1793558088,
+ "events": [
+  {
+   "sport": "tennis",
+   "t": 1793401200,
+   "title": "Paris Masters",
+   "sub": "ATP 1000 - Paris",
+   "end": 1794178740
+  },
+  {
+   "sport": "football",
+   "t": 1794135600,
+   "title": "Atletico v Barcelona",
+   "sub": "LaLiga - Metropolitano",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1794178800,
+   "title": "Dubai P1",
+   "sub": "Premier Padel - Dubai",
+   "end": 1794783540
+  },
+  {
+   "sport": "tennis",
+   "t": 1794697200,
+   "title": "ATP Finals",
+   "sub": "Turin",
+   "end": 1795388340
+  },
+  {
+   "sport": "padel",
+   "t": 1795388400,
+   "title": "Mexico Major",
+   "sub": "Premier Padel - Acapulco",
+   "end": 1795993140
+  },
+  {
+   "sport": "tennis",
+   "t": 1795474800,
+   "title": "Davis Cup Finals",
+   "sub": "Bologna",
+   "end": 1795993140
+  },
+  {
+   "sport": "boxing",
+   "t": 1796468400,
+   "title": "Benavidez v Cieslak",
+   "sub": "Cruiser unification - Glendale",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1796598000,
+   "title": "Premier Padel Finals",
+   "sub": "Barcelona",
+   "end": 1797202740
+  },
+  {
+   "sport": "tabletennis",
+   "t": 1796770800,
+   "title": "WTT Finals",
+   "sub": "Hong Kong",
+   "end": 1797202740
+  },
+  {
+   "sport": "boxing",
+   "t": 1796986800,
+   "title": "Fury v Joshua",
+   "sub": "Heavyweight - Cardiff",
+   "tbc": true
+  },
+  {
+   "sport": "boxing",
+   "t": 1797073200,
+   "title": "Bivol v Smith",
+   "sub": "Light heavy - Yekaterinburg",
+   "tbc": true
+  }
+ ]
+}
