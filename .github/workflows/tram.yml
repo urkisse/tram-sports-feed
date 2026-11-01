@@ -1,0 +1,25 @@
+# Refreshes tram/<stop>.json from the latest TRAM d'Alacant GTFS (Mobility Database feed mdb-1039).
+name: tram schedule
+on:
+  schedule:
+    - cron: "17 4 * * *"  # daily; commits only when the timetable changed
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 tools/tram_schedule.py
+      - name: commit if changed
+        run: |
+          git add tram
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "tram: update schedule ($(date -u +%F))"
+          git push
