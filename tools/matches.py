@@ -17,7 +17,7 @@ import time
 import unicodedata
 import urllib.request
 
-URL = "https://site.api.espn.com/apis/site/v2/sports/tennis/{}/scoreboard?dates={}-{}"
+URL = "https://site.api.espn.com/apis/site/v2/sports/tennis/{}/scoreboard"
 ROUNDS = {"Quarterfinal": "QF", "Quarterfinals": "QF", "Semifinal": "SF", "Semifinals": "SF", "Final": "F", "Finals": "F"}
 MAX_TITLE = 14
 
@@ -49,11 +49,9 @@ def main():
     if "--rounds" in sys.argv:
         rounds.update({r: r[:3] for r in sys.argv[sys.argv.index("--rounds") + 1].split(",")})
     tours = [e["title"] for e in json.load(open("events.json"))["events"] if e["sport"] == "tennis"]
-    today = dt.datetime.now(dt.timezone.utc)
-    span = [(today + dt.timedelta(days=d)).strftime("%Y%m%d") for d in (-1, 1)]
     out = {}
     for tour_code in ("atp", "wta"):
-        req = urllib.request.Request(URL.format(tour_code, *span), headers={"User-Agent": "tram-display"})
+        req = urllib.request.Request(URL.format(tour_code), headers={"User-Agent": "tram-display"})
         data = json.load(urllib.request.urlopen(req, timeout=30))
         for ev in data.get("events", []):
             tour = next((t for t in tours if t.lower() in ev.get("name", "").lower()), None)
