@@ -1,47 +1,47 @@
 {
- "updated": 1793576365,
+ "updated": 1793599542,
  "events": [
   {
    "sport": "tennis",
-   "t": 1793401200,
+   "t": 1793574000,
+   "end": 1794178740,
    "title": "Paris Masters",
-   "sub": "ATP 1000 - Paris",
-   "end": 1794178740
+   "sub": "ATP 1000 - Paris"
   },
   {
    "sport": "padel",
    "t": 1793574000,
+   "end": 1794092340,
    "title": "FIP World Cup",
-   "sub": "Padel nations - Doha",
-   "end": 1794092340
+   "sub": "Padel nations - Doha"
   },
   {
    "sport": "padel",
    "t": 1794178800,
+   "end": 1794783540,
    "title": "Dubai P1",
-   "sub": "Premier Padel - Dubai",
-   "end": 1794783540
+   "sub": "Premier Padel - Dubai"
   },
   {
    "sport": "tennis",
    "t": 1794697200,
+   "end": 1795388340,
    "title": "ATP Finals",
-   "sub": "Turin",
-   "end": 1795388340
+   "sub": "Turin"
   },
   {
    "sport": "padel",
    "t": 1795388400,
+   "end": 1795993140,
    "title": "Mexico Major",
-   "sub": "Premier Padel - Acapulco",
-   "end": 1795993140
+   "sub": "Premier Padel - Acapulco"
   },
   {
    "sport": "tennis",
    "t": 1795474800,
+   "end": 1795993140,
    "title": "Davis Cup Finals",
-   "sub": "Bologna",
-   "end": 1795993140
+   "sub": "Bologna"
   },
   {
    "sport": "boxing",
@@ -53,9 +53,9 @@
   {
    "sport": "padel",
    "t": 1796598000,
+   "end": 1797202740,
    "title": "Premier Padel Finals",
-   "sub": "Barcelona",
-   "end": 1797202740
+   "sub": "Barcelona"
   },
   {
    "sport": "boxing",
