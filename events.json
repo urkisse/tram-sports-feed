@@ -13,14 +13,16 @@
    "t": 1793574000,
    "end": 1794092340,
    "title": "FIP World Cup",
-   "sub": "Padel nations - Doha"
+   "sub": "Padel nations - Doha",
+   "oop": "FIP-2026-4516"
   },
   {
    "sport": "padel",
    "t": 1794178800,
    "end": 1794783540,
    "title": "Dubai P1",
-   "sub": "Premier Padel - Dubai"
+   "sub": "Premier Padel - Dubai",
+   "fip": "https://www.padelfip.com/events/emaar-dubai-premier-padel-p1-2026/"
   },
   {
    "sport": "tennis",
@@ -34,14 +36,16 @@
    "t": 1795129200,
    "end": 1795993140,
    "title": "BLAST Slam 9",
-   "sub": "Dota 2 - final TBD v TBD"
+   "sub": "Dota 2 - final TBD v TBD",
+   "lq": "BLAST Slam"
   },
   {
    "sport": "padel",
    "t": 1795388400,
    "end": 1795993140,
    "title": "Mexico Major",
-   "sub": "Premier Padel - Acapulco"
+   "sub": "Premier Padel - Acapulco",
+   "fip": "https://www.padelfip.com/events/mexico-major-2026/"
   },
   {
    "sport": "tennis",
@@ -55,7 +59,8 @@
    "t": 1796166000,
    "end": 1797202740,
    "title": "DreamLeague S30",
-   "sub": "Dota 2 - dates unconfirmed"
+   "sub": "Dota 2 - dates unconfirmed",
+   "lq": "DreamLeague Season 30"
   },
   {
    "sport": "boxing",
@@ -69,7 +74,8 @@
    "t": 1796598000,
    "end": 1797202740,
    "title": "Premier Padel Finals",
-   "sub": "Barcelona"
+   "sub": "Barcelona",
+   "fip": "https://www.padelfip.com/events/premier-padel-finals-2026/"
   },
   {
    "sport": "boxing",
@@ -90,7 +96,8 @@
    "t": 1797159600,
    "title": "CS2 Major Final",
    "sub": "TBD v TBD - Singapore",
-   "tbc": true
+   "tbc": true,
+   "lq": "PGL Major"
   }
  ]
 }

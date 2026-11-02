@@ -55,6 +55,15 @@ Drop events that already ended. Keep events that are in progress.
 - `tbc` — optional `true` when the time is not confirmed.
 - Sort by `t`. At most 20 events. The board shows the 6 nearest that have not finished.
 
+## Fields used for live match times (see tools/matches.py)
+
+Keep these when you rewrite `events.json`, and add them for new events when you can:
+
+- `oop` or `fip` (padel): the FIP schedule code such as `FIP-2026-4516`, or the event page on padelfip.com (`https://www.padelfip.com/events/...`) that links to it.
+- `lq` (dota2, cs2): part of the tournament name exactly as Liquipedia writes it, such as `BLAST Slam` or `PGL Major`.
+
+Do not edit `matches.json` or `tram/`: GitHub Actions write them.
+
 ## Steps
 
 1. Search the web for each sport's schedule for the next 6 weeks; verify dates on at least one reliable source.
