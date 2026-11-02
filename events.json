@@ -1,5 +1,5 @@
 {
- "updated": 1793599542,
+ "updated": 1793649008,
  "events": [
   {
    "sport": "tennis",
@@ -30,6 +30,13 @@
    "sub": "Turin"
   },
   {
+   "sport": "dota2",
+   "t": 1795129200,
+   "end": 1795993140,
+   "title": "BLAST Slam 9",
+   "sub": "Dota 2 - final TBD v TBD"
+  },
+  {
    "sport": "padel",
    "t": 1795388400,
    "end": 1795993140,
@@ -42,6 +49,13 @@
    "end": 1795993140,
    "title": "Davis Cup Finals",
    "sub": "Bologna"
+  },
+  {
+   "sport": "dota2",
+   "t": 1796166000,
+   "end": 1797202740,
+   "title": "DreamLeague S30",
+   "sub": "Dota 2 - dates unconfirmed"
   },
   {
    "sport": "boxing",
@@ -69,6 +83,13 @@
    "t": 1797073200,
    "title": "Bivol v Smith",
    "sub": "Light heavy - Yekaterinburg",
+   "tbc": true
+  },
+  {
+   "sport": "cs2",
+   "t": 1797159600,
+   "title": "CS2 Major Final",
+   "sub": "TBD v TBD - Singapore",
    "tbc": true
   }
  ]

@@ -5,8 +5,8 @@ and shows the next top sports events on its third page. Run once a week (Monday 
 
 ## What to include (next ~6 weeks from today, Europe/Madrid time)
 
-The owner lives in Spain and only wants the **top** events. Be strict: 6–12 events in total is ideal.
-Regular sports: padel, boxing, tennis. **No regular football and no table tennis** (the owner removed them),
+The owner lives in Spain and only wants the **top** events. Be strict: 8–15 events in total is ideal.
+Regular sports: padel, boxing, tennis, plus top esports (Dota 2, CS2). **No regular football and no table tennis** (the owner removed them),
 but the mega events listed below are always included, whatever the sport.
 
 - **padel** — Premier Padel: every Major and P1 tournament, plus the season Finals. Also the FIP World Cup / World
@@ -17,6 +17,12 @@ but the mega events listed below are always included, whatever the sport.
   if known, else the card start time.
 - **tennis** — Grand Slams, ATP/WTA Finals, Davis Cup Finals, Billie Jean King Cup Finals, ATP Masters 1000
   (and WTA 1000 that run combined with them). One entry per tournament with its date range.
+
+- **dota2 / cs2** — esports, only the very top. Dota 2: The International, plus tier-1 LAN tournaments such as BLAST Slam,
+  DreamLeague, PGL Wallachia and the Esports World Cup. CS2: Majors, plus IEM Katowice, IEM Cologne and the Esports World Cup.
+  The grand final is what matters: when its date is known, add one entry for the final, e.g. title "CS2 Major Final", with the
+  finalists once they are known ("Vitality v Spirit") and "TBD v TBD" in `sub` until then. Set `tbc` if the time is not announced.
+  If the final's date is not known yet, use one entry for the tournament with its date range. No qualifiers, no group stages.
 
 - **mega events** (always include when they fall in the window; look up to ~8 weeks ahead for these):
   Summer and Winter Olympic Games (`olympics`, one entry from opening to closing ceremony), FIFA World Cup and
@@ -40,7 +46,7 @@ Drop events that already ended. Keep events that are in progress.
 ```
 
 - `updated` — Unix time (seconds, UTC) when you wrote the file.
-- `sport` — one of `padel`, `boxing`, `tennis`, `football` (mega events only), `olympics`.
+- `sport` — one of `padel`, `boxing`, `tennis`, `dota2`, `cs2`, `football` (mega events only), `olympics`.
 - `t` — start, Unix time in seconds (UTC). For a match/fight: the start time. For a tournament: 00:00 Madrid time of day 1.
 - `end` — only for multi-day tournaments: 23:59 Madrid time of the last day.
 - `title` — at most 22 characters, plain ASCII (no accents: Clasico, Atletico, Malaga). Names, not descriptions:
