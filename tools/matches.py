@@ -205,7 +205,9 @@ def esports(events, test=None):
             short = [ascii_name(html.unescape(x)).replace("Team ", "").split(" (")[0].replace(" ", "") for x in teams[:2]]
             a, b = (short + ["TBD", "TBD"])[:2]
             finished = 'data-finished="finished"' in block
-            state = "post" if finished else "in" if t <= time.time() else "pre"
+            # у списку "upcoming" лишаються давно зіграні матчі без позначки: понад 6 годин вважаємо завершеними
+            now = time.time()
+            state = "post" if finished or now - t > 6 * 3600 else "in" if t <= now else "pre"
             out.append({"sport": sport, "t": t, "state": state, "title": title(a, b), "round": "PO", "tour": tour})
     return out
 
