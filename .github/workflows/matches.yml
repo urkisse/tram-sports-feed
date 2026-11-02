@@ -1,0 +1,23 @@
+# Refreshes matches.json: today's tennis quarterfinals, semifinals and finals with their status.
+name: matches
+on:
+  schedule:
+    - cron: "*/15 * * * *"  # commits only when a match or its status changed
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/matches.py
+      - name: commit if changed
+        run: |
+          git add matches.json
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "matches: update ($(date -u +%FT%H:%MZ))"
+          git pull --rebase -q origin main
+          git push
