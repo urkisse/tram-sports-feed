@@ -71,7 +71,9 @@ def main():
                     a, b = (surname(p[0]), surname(p[1])) if len(p) == 2 else ("TBD", "TBD")
                     out[c.get("id", f"{t}{a}")] = {"sport": "tennis", "t": t, "state": c.get("status", {}).get("type", {}).get("state", "pre"),
                                                    "title": title(a, b), "round": rnd, "tour": tour}
-    matches = sorted(out.values(), key=lambda m: m["t"])[:12]
+    # у файлі до 12 матчів: завершені не мають витісняти ті, що попереду
+    matches = sorted(out.values(), key=lambda m: (m["state"] == "post", m["t"]))[:12]
+    matches.sort(key=lambda m: m["t"])
     try:
         old = json.load(open("matches.json")).get("matches")
     except (OSError, ValueError):
