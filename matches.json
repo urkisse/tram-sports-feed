@@ -1,5 +1,5 @@
 {
- "updated": 1793702392,
+ "updated": 1793704578,
  "matches": [],
  "games": [
   {
@@ -55,7 +55,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Silva/Araujo - Bareiro/Royg",
    "round": "GS",
    "tour": "FIP World Cup"
@@ -81,7 +81,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Prieto/Santa - Norton/Jackso",
    "round": "GS",
    "tour": "FIP World Cup"
@@ -107,7 +107,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Senesi/Goyenec - Sermant/Mol",
    "round": "GS",
    "tour": "FIP World Cup"
@@ -133,7 +133,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Bahurel/Coll - Arancibia/Ram",
    "round": "GS",
    "tour": "FIP World Cup"
@@ -159,7 +159,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Pozzo/Baldi - Rosejaya/Armin",
    "round": "GS",
    "tour": "FIP World Cup"
@@ -185,7 +185,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Koek/Vocht - Dubins/Sanchez",
    "round": "GS",
    "tour": "FIP World Cup"
@@ -211,7 +211,7 @@
   {
    "sport": "padel",
    "t": 1793703600,
-   "state": "pre",
+   "state": "in",
    "full": "Girdo/Sjoland - Nimr/Tawfik",
    "round": "GS",
    "tour": "FIP World Cup"
