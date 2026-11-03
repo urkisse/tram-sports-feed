@@ -7,14 +7,16 @@
 
 state: pre (not started), in (playing now), post (finished). title is at most 14 ASCII characters.
 tour is the event title from events.json. "tbc": true means the time is not known (shown without a time).
+"matches" is for the banner: decisive rounds only. "games" is for the tournament page on the board: every round
+of today and tomorrow (Europe/Madrid), same fields, title up to 28 characters.
 Writes the file only when something other than "updated" changed.
 
 Sources, each only for events listed in events.json and only near their dates:
-- tennis: ESPN public scoreboard (unofficial), quarterfinals, semifinals and finals, singles.
+- tennis: ESPN public scoreboard (unofficial), main draw singles.
 - padel: FIP order of play at widget.matchscorerlive.com, event field "oop" (e.g. "FIP-2026-4516"),
-  quarterfinals, semifinals and finals. Many matches only say "Followed by", those have no time.
+  all rounds. Many matches only say "Followed by", those have no time.
 - dota2, cs2: Liquipedia:Matches through the MediaWiki API (CC-BY-SA, at most one parse per 30 s),
-  event field "lq" (part of the tournament name), only playoff or final stages.
+  event field "lq" (part of the tournament name), the banner only uses playoff or final stages.
 
 Usage: python3 tools/matches.py [--test-padel "Group stage"] [--test-lq "BLAST Rivals"]  (for testing)
 """
@@ -27,10 +29,15 @@ import sys
 import time
 import unicodedata
 import urllib.request
+import zoneinfo
 
 URL = "https://site.api.espn.com/apis/site/v2/sports/tennis/{}/scoreboard"
 ROUNDS = {"Quarterfinal": "QF", "Quarterfinals": "QF", "Semifinal": "SF", "Semifinals": "SF", "Final": "F", "Finals": "F"}
+BANNER_ROUNDS = ("QF", "SF", "F", "PO", "T")
 MAX_TITLE = 14
+MAX_GAME_TITLE = 28
+MAX_GAMES_PER_TOUR, MAX_GAMES = 40, 80
+MADRID = zoneinfo.ZoneInfo("Europe/Madrid")
 OOP = "https://widget.matchscorerlive.com/screen/oopbyday/{}/{}?t=tol"
 LQ = "https://liquipedia.net/{}/api.php?action=parse&page=Liquipedia:Matches&format=json&prop=text"
 UA = "tram-display/1.0 (https://github.com/urkisse/tram-sports-feed)"
@@ -58,6 +65,26 @@ def title(a, b):
     return f"{a[:room]}-{b[:MAX_TITLE - 1 - room]}"
 
 
+def game_title(a, b):
+    room = (MAX_GAME_TITLE - 3) // 2
+    if len(a) + len(b) + 3 > MAX_GAME_TITLE:
+        # коротша сторона лишається цілою, довшу обрізаємо
+        if len(a) <= room:
+            b = b[:MAX_GAME_TITLE - 3 - len(a)]
+        elif len(b) <= room:
+            a = a[:MAX_GAME_TITLE - 3 - len(b)]
+        else:
+            a, b = a[:room], b[:MAX_GAME_TITLE - 3 - room]
+    return f"{a} - {b}"
+
+
+def tennis_round(name):
+    if name.startswith("Qualifying"):
+        return None
+    m = re.fullmatch(r"Round (\d+)", name)
+    return ROUNDS.get(name) or (f"R{m.group(1)}" if m else name[:3])
+
+
 def fetch(url, headers=None):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Encoding": "gzip", **(headers or {})})
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -71,7 +98,7 @@ def near(e, days=1):
     return e["t"] - days * 86400 <= now <= e.get("end", e["t"]) + days * 86400
 
 
-def tennis(events, rounds):
+def tennis(events):
     out = {}
     tours = [e["title"] for e in events if e["sport"] == "tennis"]
     for tour_code in ("atp", "wta"):
@@ -84,16 +111,19 @@ def tennis(events, rounds):
                 if "Singles" not in g.get("grouping", {}).get("displayName", ""):
                     continue
                 for c in g.get("competitions", []):
-                    rnd = rounds.get(c.get("round", {}).get("displayName", ""))
+                    rnd = tennis_round(c.get("round", {}).get("displayName", ""))
                     if not rnd:
                         continue
                     t = int(dt.datetime.fromisoformat(c["date"].replace("Z", "+00:00")).timestamp())
-                    if abs(t - time.time()) > 36 * 3600:
+                    if abs(t - time.time()) > 60 * 3600:
                         continue
                     p = c.get("competitors", [])
                     a, b = (surname(p[0]), surname(p[1])) if len(p) == 2 else ("TBD", "TBD")
-                    out[c.get("id", f"{t}{a}")] = {"sport": "tennis", "t": t, "state": c.get("status", {}).get("type", {}).get("state", "pre"),
-                                                   "title": title(a, b), "round": rnd, "tour": tour}
+                    m = {"sport": "tennis", "t": t, "state": c.get("status", {}).get("type", {}).get("state", "pre"),
+                         "title": title(a, b), "full": game_title(a, b), "round": rnd, "tour": tour}
+                    if c.get("timeValid") is False:
+                        m["tbc"] = True
+                    out[c.get("id", f"{t}{a}")] = m
     return list(out.values())
 
 
@@ -106,7 +136,7 @@ def padel_round(name, extra):
     n = name.lower()
     if extra and extra.lower() in n:
         return "T"
-    return "QF" if "quarter" in n else "SF" if "semi" in n else "F" if "final" in n else None
+    return "QF" if "quarter" in n else "SF" if "semi" in n else "F" if "final" in n else "GS"
 
 
 def padel(events, extra=None):
@@ -148,7 +178,8 @@ def padel(events, extra=None):
                     when = int(date.replace(hour=clock.hour, minute=clock.minute, tzinfo=dt.timezone.utc).timestamp()) - off
                     last = when
                 i += 1
-                while i < len(tk) and tk[i] in ("Men", "Women", "Local Time") or (i < len(tk) and re.fullmatch(r"\d+/\d+/\d+ .*", tk[i])):
+                # заголовок корту: час іще раз, місцевий час, потім стать
+                while i < len(tk) and (tk[i] in ("Men", "Women", "Local Time") or re.fullmatch(r"\d+/\d+/\d+ .*|Starting at .*|Not before .*", tk[i])):
                     i += 1
                 if i >= len(tk):
                     break
@@ -167,13 +198,14 @@ def padel(events, extra=None):
                     i += 1
                 done = i < len(tk) and tk[i] == "Completed"
                 played = any(re.fullmatch(r"\d+", x) for x in block)
-                if rnd:
-                    a, b = names[0][0] if names[0] else "TBD", names[1][0] if names[1] else "TBD"
-                    m2 = {"sport": "padel", "t": when or last or int(date.replace(hour=12, tzinfo=dt.timezone.utc).timestamp()),
-                          "state": "post" if done else "in" if played else "pre", "title": title(a, b), "round": rnd, "tour": e["title"]}
-                    if not when:
-                        m2["tbc"] = True
-                    out.append(m2)
+                a, b = names[0][0] if names[0] else "TBD", names[1][0] if names[1] else "TBD"
+                pair = lambda n: "/".join(n[:2]) or "TBD"
+                m2 = {"sport": "padel", "t": when or last or int(date.replace(hour=12, tzinfo=dt.timezone.utc).timestamp()),
+                      "state": "post" if done else "in" if played else "pre", "title": title(a, b),
+                      "full": game_title(pair(names[0]), pair(names[1])), "round": rnd, "tour": e["title"]}
+                if not when:
+                    m2["tbc"] = True
+                out.append(m2)
     return out
 
 
@@ -196,10 +228,10 @@ def esports(events, test=None):
                 continue
             tour_name = html.unescape(name.group(1))
             tour = next((v for k, v in watch.items() if k.lower() in tour_name.lower()), None)
-            if not tour or not (test or re.search(r"(?i)playoff|final", tour_name)):
+            if not tour:
                 continue
             t = int(ts.group(1))
-            if abs(t - time.time()) > 36 * 3600:
+            if abs(t - time.time()) > 60 * 3600:
                 continue
             teams = re.findall(r'match-info-header-opponent.*?title="([^"]+)"', block, re.S)
             short = [ascii_name(html.unescape(x)).replace("Team ", "").split(" (")[0].replace(" ", "") for x in teams[:2]]
@@ -208,7 +240,8 @@ def esports(events, test=None):
             # у списку "upcoming" лишаються давно зіграні матчі без позначки: понад 6 годин вважаємо завершеними
             now = time.time()
             state = "post" if finished or now - t > 6 * 3600 else "in" if t <= now else "pre"
-            out.append({"sport": sport, "t": t, "state": state, "title": title(a, b), "round": "PO", "tour": tour})
+            rnd = "PO" if test or re.search(r"(?i)playoff|final", tour_name) else "GS"
+            out.append({"sport": sport, "t": t, "state": state, "title": title(a, b), "full": game_title(a, b), "round": rnd, "tour": tour})
     return out
 
 
@@ -217,27 +250,39 @@ def main():
     events = json.load(open("events.json"))["events"]
     found = {}
     # одне джерело може тимчасово не відповідати: решта все одно оновляться
-    for name, job in (("tennis", lambda: tennis(events, ROUNDS)), ("padel", lambda: padel(events, arg("--test-padel"))),
+    for name, job in (("tennis", lambda: tennis(events)), ("padel", lambda: padel(events, arg("--test-padel"))),
                       ("esports", lambda: esports(events, arg("--test-lq")))):
         try:
             for m in job():
                 found[(m["t"], m["title"], m["tour"])] = m
         except Exception as e:
             print(f"{name} failed: {e}")
-    out = found
+    decisive = [m for m in found.values() if m["round"] in BANNER_ROUNDS and abs(m["t"] - time.time()) <= 36 * 3600]
     # у файлі до 12 матчів: завершені не мають витісняти ті, що попереду
-    matches = sorted(out.values(), key=lambda m: (m["state"] == "post", m["t"]))[:12]
+    matches = sorted(decisive, key=lambda m: (m["state"] == "post", m["t"]))[:12]
     matches.sort(key=lambda m: m["t"])
+    matches = [{k: v for k, v in m.items() if k != "full"} for m in matches]
+    today = dt.datetime.now(MADRID).replace(hour=0, minute=0, second=0, microsecond=0)
+    first, last = today.timestamp(), (today + dt.timedelta(days=2)).timestamp()
+    games, per_tour = [], {}
+    for m in sorted(found.values(), key=lambda m: (m["state"] == "post", m["t"])):
+        if first <= m["t"] < last and per_tour.get(m["tour"], 0) < MAX_GAMES_PER_TOUR and len(games) < MAX_GAMES:
+            per_tour[m["tour"]] = per_tour.get(m["tour"], 0) + 1
+            games.append({**{k: v for k, v in m.items() if k != "title"}})
+    games.sort(key=lambda m: m["t"])
     try:
-        old = json.load(open("matches.json")).get("matches")
+        saved = json.load(open("matches.json"))
     except (OSError, ValueError):
-        old = None
-    if old != matches:
+        saved = {}
+    changed = saved.get("matches") != matches or saved.get("games") != games
+    if changed:
         with open("matches.json", "w") as f:
-            json.dump({"updated": int(time.time()), "matches": matches}, f, indent=1)
-    print(f"matches {len(matches)}, changed {old != matches}")
+            json.dump({"updated": int(time.time()), "matches": matches, "games": games}, f, indent=1)
+    print(f"matches {len(matches)}, games {len(games)}, changed {changed}")
     for m in matches:
         print(" ", dt.datetime.fromtimestamp(m["t"]).strftime("%d.%m %H:%M"), m["state"], m["round"], m["title"], "|", m["tour"])
+    for m in games:
+        print("  g", dt.datetime.fromtimestamp(m["t"]).strftime("%d.%m %H:%M"), m["state"], m["round"], m["full"], "|", m["tour"], "tbc" if m.get("tbc") else "")
 
 
 if __name__ == "__main__":
