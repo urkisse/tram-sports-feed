@@ -53,7 +53,9 @@ Drop events that already ended. Keep events that are in progress.
   "Canelo v Crawford", "Milano P1", "WTT Finals", "Australian Open".
 - `sub` — at most 30 characters, plain ASCII: competition and place, e.g. "Heavyweight - Cardiff", "Premier Padel - Milan".
 - `tbc` — optional `true` when the time is not confirmed.
-- Sort by `t`. At most 20 events. The board shows the 6 nearest that have not finished.
+- `place` — optional, for tournaments, at most 23 characters, plain ASCII: venue and city, e.g. "Inalpi Arena, Turin", or "Online". Keep what is already there.
+- `prize` — optional, for tournaments, at most 15 characters, plain ASCII: total prize money of THIS edition, e.g. "EUR 6.3M", "USD 750K", "EUR 525K each". Only from a reliable source for this year; if last year's figure is all you find, leave it out. Never estimate.
+- Sort by `t`. At most 20 events. The board shows the nearest ones that have not finished, 3 per screen.
 
 ## Fields used for live match times (see tools/matches.py)
 

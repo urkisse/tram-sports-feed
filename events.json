@@ -6,7 +6,9 @@
    "t": 1793574000,
    "end": 1794178740,
    "title": "Paris Masters",
-   "sub": "ATP 1000 - Paris"
+   "sub": "ATP 1000 - Paris",
+   "place": "Paris La Defense Arena",
+   "prize": "EUR 6.3M"
   },
   {
    "sport": "padel",
@@ -14,7 +16,9 @@
    "end": 1794092340,
    "title": "FIP World Cup",
    "sub": "Padel nations - Doha",
-   "oop": "FIP-2026-4516"
+   "oop": "FIP-2026-4516",
+   "place": "Khalifa Complex, Doha",
+   "prize": "EUR 1.2M"
   },
   {
    "sport": "padel",
@@ -22,14 +26,16 @@
    "end": 1794783540,
    "title": "Dubai P1",
    "sub": "Premier Padel - Dubai",
-   "fip": "https://www.padelfip.com/events/emaar-dubai-premier-padel-p1-2026/"
+   "fip": "https://www.padelfip.com/events/emaar-dubai-premier-padel-p1-2026/",
+   "place": "Dubai"
   },
   {
    "sport": "tennis",
    "t": 1794697200,
    "end": 1795388340,
    "title": "ATP Finals",
-   "sub": "Turin"
+   "sub": "Turin",
+   "place": "Inalpi Arena, Turin"
   },
   {
    "sport": "dota2",
@@ -37,7 +43,8 @@
    "end": 1795993140,
    "title": "BLAST Slam 9",
    "sub": "Dota 2 - final TBD v TBD",
-   "lq": "BLAST Slam"
+   "lq": "BLAST Slam",
+   "prize": "USD 1M"
   },
   {
    "sport": "padel",
@@ -45,14 +52,17 @@
    "end": 1795993140,
    "title": "Mexico Major",
    "sub": "Premier Padel - Acapulco",
-   "fip": "https://www.padelfip.com/events/mexico-major-2026/"
+   "fip": "https://www.padelfip.com/events/mexico-major-2026/",
+   "place": "Acapulco",
+   "prize": "EUR 525K each"
   },
   {
    "sport": "tennis",
    "t": 1795474800,
    "end": 1795993140,
    "title": "Davis Cup Finals",
-   "sub": "Bologna"
+   "sub": "Bologna",
+   "place": "SuperTennis Arena, Bolo"
   },
   {
    "sport": "dota2",
@@ -60,7 +70,9 @@
    "end": 1797202740,
    "title": "DreamLeague S30",
    "sub": "Dota 2 - dates unconfirmed",
-   "lq": "DreamLeague Season 30"
+   "lq": "DreamLeague Season 30",
+   "place": "Online",
+   "prize": "USD 750K"
   },
   {
    "sport": "boxing",
@@ -75,7 +87,8 @@
    "end": 1797202740,
    "title": "Premier Padel Finals",
    "sub": "Barcelona",
-   "fip": "https://www.padelfip.com/events/premier-padel-finals-2026/"
+   "fip": "https://www.padelfip.com/events/premier-padel-finals-2026/",
+   "place": "Barcelona"
   },
   {
    "sport": "boxing",
@@ -97,7 +110,9 @@
    "title": "CS2 Major Final",
    "sub": "TBD v TBD - Singapore",
    "tbc": true,
-   "lq": "PGL Major"
+   "lq": "PGL Major",
+   "place": "Singapore Indoor Stadiu",
+   "prize": "USD 1.25M"
   }
  ]
 }
