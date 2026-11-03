@@ -8,7 +8,7 @@
 state: pre (not started), in (playing now), post (finished). title is at most 14 ASCII characters.
 tour is the event title from events.json. "tbc": true means the time is not known (shown without a time).
 "matches" is for the banner: decisive rounds only. "games" is for the tournament page on the board: every round
-of today and tomorrow (Europe/Madrid), same fields, title up to 28 characters.
+of today and tomorrow (Europe/Madrid), same fields, "full" up to 30 characters with the world ranking after a tennis player's name when known.
 Writes the file only when something other than "updated" changed.
 
 Sources, each only for events listed in events.json and only near their dates:
@@ -32,10 +32,11 @@ import urllib.request
 import zoneinfo
 
 URL = "https://site.api.espn.com/apis/site/v2/sports/tennis/{}/scoreboard"
+RANK_URL = "https://site.api.espn.com/apis/site/v2/sports/tennis/{}/rankings"
 ROUNDS = {"Quarterfinal": "QF", "Quarterfinals": "QF", "Semifinal": "SF", "Semifinals": "SF", "Final": "F", "Finals": "F"}
 BANNER_ROUNDS = ("QF", "SF", "F", "PO", "T")
 MAX_TITLE = 14
-MAX_GAME_TITLE = 28
+MAX_GAME_TITLE = 30
 MAX_GAMES_PER_TOUR, MAX_GAMES = 40, 80
 MADRID = zoneinfo.ZoneInfo("Europe/Madrid")
 OOP = "https://widget.matchscorerlive.com/screen/oopbyday/{}/{}?t=tol"
@@ -65,17 +66,15 @@ def title(a, b):
     return f"{a[:room]}-{b[:MAX_TITLE - 1 - room]}"
 
 
-def game_title(a, b):
-    room = (MAX_GAME_TITLE - 3) // 2
-    if len(a) + len(b) + 3 > MAX_GAME_TITLE:
-        # коротша сторона лишається цілою, довшу обрізаємо
-        if len(a) <= room:
-            b = b[:MAX_GAME_TITLE - 3 - len(a)]
-        elif len(b) <= room:
-            a = a[:MAX_GAME_TITLE - 3 - len(b)]
+def game_title(a, b, ra=None, rb=None):
+    """"Zverev 1 - Alcaraz 2": місце в рейтингу не обрізаємо, лише довше ім'я."""
+    tail = lambda r: f" {r}" if r else ""
+    while len(a) + len(tail(ra)) + len(b) + len(tail(rb)) + 3 > MAX_GAME_TITLE:
+        if len(a) >= len(b):
+            a = a[:-1]
         else:
-            a, b = a[:room], b[:MAX_GAME_TITLE - 3 - room]
-    return f"{a} - {b}"
+            b = b[:-1]
+    return f"{a}{tail(ra)} - {b}{tail(rb)}"
 
 
 def tennis_round(name):
@@ -98,8 +97,21 @@ def near(e, days=1):
     return e["t"] - days * 86400 <= now <= e.get("end", e["t"]) + days * 86400
 
 
+def tennis_ranks():
+    """Місця в рейтингах ATP і WTA (топ-150 кожного). Без них турнір усе одно показуємо."""
+    ranks = {}
+    for tour_code in ("atp", "wta"):
+        try:
+            for r in json.loads(fetch(RANK_URL.format(tour_code)))["rankings"][0]["ranks"]:
+                ranks[r["athlete"]["displayName"]] = r["current"]
+        except Exception as e:
+            print(f"ranks {tour_code} failed: {e}")
+    return ranks
+
+
 def tennis(events):
     out = {}
+    ranks = tennis_ranks()
     tours = [e["title"] for e in events if e["sport"] == "tennis"]
     for tour_code in ("atp", "wta"):
         data = json.loads(fetch(URL.format(tour_code)))
@@ -119,8 +131,9 @@ def tennis(events):
                         continue
                     p = c.get("competitors", [])
                     a, b = (surname(p[0]), surname(p[1])) if len(p) == 2 else ("TBD", "TBD")
+                    ra, rb = (ranks.get((x.get("athlete") or {}).get("displayName")) for x in p) if len(p) == 2 else (None, None)
                     m = {"sport": "tennis", "t": t, "state": c.get("status", {}).get("type", {}).get("state", "pre"),
-                         "title": title(a, b), "full": game_title(a, b), "round": rnd, "tour": tour}
+                         "title": title(a, b), "full": game_title(a, b, ra, rb), "round": rnd, "tour": tour}
                     if c.get("timeValid") is False:
                         m["tbc"] = True
                     out[c.get("id", f"{t}{a}")] = m
