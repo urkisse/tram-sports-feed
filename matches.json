@@ -1,5 +1,5 @@
 {
- "updated": 1793983668,
+ "updated": 1794002336,
  "matches": [
   {
    "sport": "padel",
@@ -132,15 +132,6 @@
   {
    "sport": "padel",
    "t": 1793962800,
-   "state": "in",
-   "full": "Ribeiro/Santos - Cirne/Barros",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793962800,
    "state": "pre",
    "full": "Sermant/Vieren - Kusuma/Putria",
    "round": "SF",
@@ -152,15 +143,6 @@
    "t": 1793962800,
    "state": "pre",
    "full": "Phillips/Tord - Alonso/Beltram",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793962800,
-   "state": "in",
-   "full": "Faidallah/Els - Chahuan/Gonzal",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -221,6 +203,15 @@
    "t": 1793962800,
    "state": "post",
    "full": "Achando/Nogue - Branchi/Olivei",
+   "round": "SF",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1793962800,
+   "state": "post",
+   "full": "Ribeiro/Santos - Cirne/Barros",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -303,6 +294,32 @@
    "tbc": true
   },
   {
+   "sport": "padel",
+   "t": 1793962800,
+   "state": "post",
+   "full": "Faidallah/Els - Chahuan/Gonzal",
+   "round": "SF",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1793962800,
+   "state": "post",
+   "full": "Bareiro/Miranda - Hering/Kurz",
+   "round": "SF",
+   "tour": "FIP World Cup"
+  },
+  {
+   "sport": "padel",
+   "t": 1793962800,
+   "state": "post",
+   "full": "Vera/Royg - Schmitz/Renic",
+   "round": "SF",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
    "sport": "tennis",
    "t": 1793970600,
    "state": "post",
@@ -313,26 +330,8 @@
   {
    "sport": "padel",
    "t": 1793977200,
-   "state": "in",
-   "full": "Tapia/Chingot - Patiniotis/Bra",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
    "state": "pre",
    "full": "Alfonso/Libaa - Cassetta/Iacov",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "pre",
-   "full": "Navarro/Lebron - Araujo/Graca",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -349,34 +348,8 @@
   {
    "sport": "padel",
    "t": 1793977200,
-   "state": "pre",
-   "full": "Alkuwari/Alha - Icardo/Alabdul",
-   "round": "SF",
-   "tour": "FIP World Cup"
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "pre",
-   "full": "Nawaf/Nawaf - Janahi/Kamal",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "pre",
-   "full": "Alkuwari/Waly - Janahi/Janahi",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
    "state": "in",
-   "full": "Flores/Julianot - Nolten/Betuw",
+   "full": "Alkuwari/Waly - Janahi/Janahi",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -393,52 +366,8 @@
   {
    "sport": "padel",
    "t": 1793977200,
-   "state": "in",
-   "full": "Trumpler/Wunn - Yitbarek/Frost",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
    "state": "pre",
    "full": "Julich/Fitzon - Olsson/Rutgers",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "in",
-   "full": "Bergeron/Jori - Hernandez/Torr",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "pre",
-   "full": "Blanque/Guich - Padilla/Garcia",
-   "round": "SF",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "pre",
-   "full": "Martin/Miltos - Valdes/Molina",
-   "round": "SF",
-   "tour": "FIP World Cup"
-  },
-  {
-   "sport": "padel",
-   "t": 1793977200,
-   "state": "pre",
-   "full": "Abud/Dehnike - Martinez/Campos",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -455,8 +384,16 @@
   {
    "sport": "padel",
    "t": 1793977200,
-   "state": "in",
-   "full": "Segura/Frances - Navarro/Zelba",
+   "state": "post",
+   "full": "Nenno/Augsburg - Caruso/Abbate",
+   "round": "SF",
+   "tour": "FIP World Cup"
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Tapia/Chingot - Patiniotis/Bra",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -464,8 +401,67 @@
   {
    "sport": "padel",
    "t": 1793977200,
-   "state": "pre",
-   "full": "Alvarez/Armas - Bechard/Ashend",
+   "state": "post",
+   "full": "Lacabe/Yanguas - Deus/Deus",
+   "round": "SF",
+   "tour": "FIP World Cup"
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Navarro/Lebron - Araujo/Graca",
+   "round": "SF",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Alkuwari/Alha - Icardo/Alabdul",
+   "round": "SF",
+   "tour": "FIP World Cup"
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Nawaf/Nawaf - Janahi/Kamal",
+   "round": "SF",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Bergamini/Simo - Meijer/Nolten",
+   "round": "SF",
+   "tour": "FIP World Cup"
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Flores/Julianot - Nolten/Betuw",
+   "round": "SF",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Lindmeyer/Mer - Windahl/Vasque",
+   "round": "SF",
+   "tour": "FIP World Cup"
+  },
+  {
+   "sport": "padel",
+   "t": 1793977200,
+   "state": "post",
+   "full": "Trumpler/Wunn - Yitbarek/Frost",
    "round": "SF",
    "tour": "FIP World Cup",
    "tbc": true
@@ -473,22 +469,22 @@
   {
    "sport": "tennis",
    "t": 1793978400,
-   "state": "in",
+   "state": "post",
    "full": "Hijikata 83 - Assche 47",
    "round": "QF",
    "tour": "Paris Masters"
   },
   {
    "sport": "tennis",
-   "t": 1793988000,
-   "state": "pre",
+   "t": 1793991600,
+   "state": "post",
    "full": "Alcaraz 3 - Fritz 12",
    "round": "QF",
    "tour": "Paris Masters"
   },
   {
    "sport": "tennis",
-   "t": 1793993400,
+   "t": 1794003000,
    "state": "pre",
    "full": "Borges 49 - Ruud 23",
    "round": "QF",
@@ -496,21 +492,19 @@
   },
   {
    "sport": "tennis",
-   "t": 1794027600,
+   "t": 1794058200,
    "state": "pre",
-   "full": "Shelton 4 - TBD",
+   "full": "Shelton 4 - Assche 47",
    "round": "SF",
-   "tour": "Paris Masters",
-   "tbc": true
+   "tour": "Paris Masters"
   },
   {
    "sport": "tennis",
-   "t": 1794027600,
+   "t": 1794067200,
    "state": "pre",
-   "full": "TBD - TBD",
+   "full": "Alcaraz 3 - TBD",
    "round": "SF",
-   "tour": "Paris Masters",
-   "tbc": true
+   "tour": "Paris Masters"
   }
  ]
 }
