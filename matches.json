@@ -1,5 +1,5 @@
 {
- "updated": 1794079728,
+ "updated": 1794092210,
  "matches": [
   {
    "sport": "padel",
@@ -433,6 +433,24 @@
   },
   {
    "sport": "padel",
+   "t": 1794040200,
+   "state": "post",
+   "full": "Torre/Hernand - Martinez/Campo",
+   "round": "F",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1794040200,
+   "state": "post",
+   "full": "Garcia/Montoy - Ordenes/Molina",
+   "round": "F",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
    "t": 1794049200,
    "state": "pre",
    "full": "Fernandez/San - Riera/Bidahorr",
@@ -447,24 +465,6 @@
    "full": "Shelton 4 - Assche 47",
    "round": "SF",
    "tour": "Paris Masters"
-  },
-  {
-   "sport": "padel",
-   "t": 1794063600,
-   "state": "in",
-   "full": "Tapia/Chingotto - Navarro/Sanz",
-   "round": "F",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1794063600,
-   "state": "pre",
-   "full": "Alfonso/Libaak - Coello/Nieto",
-   "round": "F",
-   "tour": "FIP World Cup",
-   "tbc": true
   },
   {
    "sport": "tennis",
