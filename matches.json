@@ -1,5 +1,5 @@
 {
- "updated": 1794064322,
+ "updated": 1794079728,
  "matches": [
   {
    "sport": "padel",
@@ -297,15 +297,6 @@
    "sport": "padel",
    "t": 1794040200,
    "state": "pre",
-   "full": "Cassetta/Iacovin - Jesus/Perry",
-   "round": "F",
-   "tour": "FIP World Cup",
-   "tbc": true
-  },
-  {
-   "sport": "padel",
-   "t": 1794040200,
-   "state": "pre",
    "full": "Alkuwari/Waly - Humphreys/Koni",
    "round": "F",
    "tour": "FIP World Cup",
@@ -351,6 +342,15 @@
    "t": 1794040200,
    "state": "post",
    "full": "Patiniotis/Graziot - Deus/Deus",
+   "round": "F",
+   "tour": "FIP World Cup",
+   "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1794040200,
+   "state": "post",
+   "full": "Cassetta/Iacovin - Jesus/Perry",
    "round": "F",
    "tour": "FIP World Cup",
    "tbc": true
@@ -416,12 +416,20 @@
   },
   {
    "sport": "padel",
-   "t": 1794049200,
-   "state": "in",
-   "full": "Martin/Pons - Senesi/Jensen",
+   "t": 1794040200,
+   "state": "post",
+   "full": "Fonteny/Leygu - Martin/Dehnike",
    "round": "F",
    "tour": "FIP World Cup",
    "tbc": true
+  },
+  {
+   "sport": "padel",
+   "t": 1794040200,
+   "state": "post",
+   "full": "Padilla/Garci - Kuhlmann/Oliva",
+   "round": "F",
+   "tour": "FIP World Cup"
   },
   {
    "sport": "padel",
@@ -435,7 +443,7 @@
   {
    "sport": "tennis",
    "t": 1794058800,
-   "state": "in",
+   "state": "post",
    "full": "Shelton 4 - Assche 47",
    "round": "SF",
    "tour": "Paris Masters"
@@ -443,15 +451,7 @@
   {
    "sport": "padel",
    "t": 1794063600,
-   "state": "pre",
-   "full": "Nenno/Augsburg - Lacabe/Lebron",
-   "round": "F",
-   "tour": "FIP World Cup"
-  },
-  {
-   "sport": "padel",
-   "t": 1794063600,
-   "state": "pre",
+   "state": "in",
    "full": "Tapia/Chingotto - Navarro/Sanz",
    "round": "F",
    "tour": "FIP World Cup",
@@ -468,20 +468,19 @@
   },
   {
    "sport": "tennis",
-   "t": 1794067200,
-   "state": "pre",
+   "t": 1794068700,
+   "state": "post",
    "full": "Alcaraz 3 - Ruud 23",
    "round": "SF",
    "tour": "Paris Masters"
   },
   {
    "sport": "tennis",
-   "t": 1794114000,
+   "t": 1794146400,
    "state": "pre",
-   "full": "TBD - TBD",
+   "full": "Alcaraz 3 - Shelton 4",
    "round": "F",
-   "tour": "Paris Masters",
-   "tbc": true
+   "tour": "Paris Masters"
   }
  ]
 }
