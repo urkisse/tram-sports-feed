@@ -1,14 +1,6 @@
 {
- "updated": 1794129797,
+ "updated": 1794154435,
  "matches": [
-  {
-   "sport": "tennis",
-   "t": 1794003000,
-   "state": "post",
-   "title": "Borges-Ruud",
-   "round": "QF",
-   "tour": "Paris Masters"
-  },
   {
    "sport": "tennis",
    "t": 1794058800,
@@ -27,8 +19,8 @@
   },
   {
    "sport": "tennis",
-   "t": 1794146400,
-   "state": "pre",
+   "t": 1794147300,
+   "state": "in",
    "title": "Alcara-Shelton",
    "round": "F",
    "tour": "Paris Masters"
@@ -37,8 +29,8 @@
  "games": [
   {
    "sport": "tennis",
-   "t": 1794146400,
-   "state": "pre",
+   "t": 1794147300,
+   "state": "in",
    "full": "Alcaraz 3 - Shelton 4",
    "round": "F",
    "tour": "Paris Masters"
