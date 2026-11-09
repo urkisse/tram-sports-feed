@@ -1,5 +1,5 @@
 {
- "updated": 1794170161,
+ "updated": 1794182679,
  "matches": [
   {
    "sport": "tennis",
@@ -26,14 +26,5 @@
    "tour": "Paris Masters"
   }
  ],
- "games": [
-  {
-   "sport": "tennis",
-   "t": 1794147300,
-   "state": "post",
-   "full": "Alcaraz 3 - Shelton 4",
-   "round": "F",
-   "tour": "Paris Masters"
-  }
- ]
+ "games": []
 }
