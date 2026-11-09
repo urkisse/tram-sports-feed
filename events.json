@@ -1,25 +1,6 @@
 {
- "updated": 1793649008,
+ "updated": 1794204823,
  "events": [
-  {
-   "sport": "tennis",
-   "t": 1793574000,
-   "end": 1794178740,
-   "title": "Paris Masters",
-   "sub": "ATP 1000 - Paris",
-   "place": "Paris La Defense Arena",
-   "prize": "EUR 6.3M"
-  },
-  {
-   "sport": "padel",
-   "t": 1793574000,
-   "end": 1794092340,
-   "title": "FIP World Cup",
-   "sub": "Padel nations - Doha",
-   "oop": "FIP-2026-4516",
-   "place": "Khalifa Complex, Doha",
-   "prize": "EUR 1.2M"
-  },
   {
    "sport": "padel",
    "t": 1794178800,
@@ -42,7 +23,7 @@
    "t": 1795129200,
    "end": 1795993140,
    "title": "BLAST Slam 9",
-   "sub": "Dota 2 - final TBD v TBD",
+   "sub": "Dota 2 - online, final TBD",
    "lq": "BLAST Slam",
    "prize": "USD 1M"
   },
@@ -76,7 +57,7 @@
   },
   {
    "sport": "boxing",
-   "t": 1796468400,
+   "t": 1796518800,
    "title": "Benavidez v Cieslak",
    "sub": "Cruiser unification - Glendale",
    "tbc": true
@@ -92,7 +73,7 @@
   },
   {
    "sport": "boxing",
-   "t": 1796986800,
+   "t": 1797037200,
    "title": "Fury v Joshua",
    "sub": "Heavyweight - Cardiff",
    "tbc": true
