@@ -1,11 +1,11 @@
 {
- "updated": 1794726009,
+ "updated": 1794753987,
  "matches": [],
  "games": [
   {
    "sport": "tennis",
-   "t": 1794747600,
-   "state": "pre",
+   "t": 1794749100,
+   "state": "in",
    "full": "Jodar 10 - Zverev 1",
    "round": "Gro",
    "tour": "ATP Finals"
@@ -17,24 +17,6 @@
    "full": "Fils 7 - Shelton 4",
    "round": "Gro",
    "tour": "ATP Finals"
-  },
-  {
-   "sport": "tennis",
-   "t": 1794805200,
-   "state": "pre",
-   "full": "Cobolli 6 - Alcaraz 3",
-   "round": "Gro",
-   "tour": "ATP Finals",
-   "tbc": true
-  },
-  {
-   "sport": "tennis",
-   "t": 1794805200,
-   "state": "pre",
-   "full": "Tiafoe 8 - Cobolli 6",
-   "round": "Gro",
-   "tour": "ATP Finals",
-   "tbc": true
   },
   {
    "sport": "tennis",
