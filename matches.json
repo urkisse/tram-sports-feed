@@ -1,11 +1,11 @@
 {
- "updated": 1794787189,
+ "updated": 1794844796,
  "matches": [],
  "games": [
   {
    "sport": "tennis",
-   "t": 1794834000,
-   "state": "pre",
+   "t": 1794834600,
+   "state": "post",
    "full": "Tiafoe 8 - Alcaraz 3",
    "round": "Gro",
    "tour": "ATP Finals"
@@ -17,24 +17,6 @@
    "full": "Cobolli 6 - Medvedev 5",
    "round": "Gro",
    "tour": "ATP Finals"
-  },
-  {
-   "sport": "tennis",
-   "t": 1794891600,
-   "state": "pre",
-   "full": "Tiafoe 8 - Medvedev 5",
-   "round": "Gro",
-   "tour": "ATP Finals",
-   "tbc": true
-  },
-  {
-   "sport": "tennis",
-   "t": 1794891600,
-   "state": "pre",
-   "full": "Tiafoe 8 - Cobolli 6",
-   "round": "Gro",
-   "tour": "ATP Finals",
-   "tbc": true
   },
   {
    "sport": "tennis",
