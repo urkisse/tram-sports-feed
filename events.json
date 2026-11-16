@@ -1,15 +1,6 @@
 {
- "updated": 1794204823,
+ "updated": 1794808928,
  "events": [
-  {
-   "sport": "padel",
-   "t": 1794178800,
-   "end": 1794783540,
-   "title": "Dubai P1",
-   "sub": "Premier Padel - Dubai",
-   "fip": "https://www.padelfip.com/events/emaar-dubai-premier-padel-p1-2026/",
-   "place": "Dubai"
-  },
   {
    "sport": "tennis",
    "t": 1794697200,
@@ -20,7 +11,7 @@
   },
   {
    "sport": "dota2",
-   "t": 1795129200,
+   "t": 1794870000,
    "end": 1795993140,
    "title": "BLAST Slam 9",
    "sub": "Dota 2 - online, final TBD",
@@ -57,7 +48,7 @@
   },
   {
    "sport": "boxing",
-   "t": 1796518800,
+   "t": 1796515200,
    "title": "Benavidez v Cieslak",
    "sub": "Cruiser unification - Glendale",
    "tbc": true
