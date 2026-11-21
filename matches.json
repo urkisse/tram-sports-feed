@@ -1,10 +1,10 @@
 {
- "updated": 1795221745,
+ "updated": 1795276780,
  "matches": [
   {
    "sport": "tennis",
-   "t": 1795267800,
-   "state": "pre",
+   "t": 1795268400,
+   "state": "post",
    "title": "Shelto-Alcaraz",
    "round": "SF",
    "tour": "ATP Finals"
@@ -21,7 +21,7 @@
    "sport": "tennis",
    "t": 1795323600,
    "state": "pre",
-   "title": "TBD-TBD",
+   "title": "Alcaraz-TBD",
    "round": "F",
    "tour": "ATP Finals",
    "tbc": true
@@ -30,8 +30,8 @@
  "games": [
   {
    "sport": "tennis",
-   "t": 1795267800,
-   "state": "pre",
+   "t": 1795268400,
+   "state": "post",
    "full": "Shelton 4 - Alcaraz 3",
    "round": "SF",
    "tour": "ATP Finals"
@@ -48,7 +48,7 @@
    "sport": "tennis",
    "t": 1795323600,
    "state": "pre",
-   "full": "TBD - TBD",
+   "full": "Alcaraz 3 - TBD",
    "round": "F",
    "tour": "ATP Finals",
    "tbc": true
