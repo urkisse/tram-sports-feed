@@ -1,23 +1,21 @@
 {
- "updated": 1795200715,
+ "updated": 1795221745,
  "matches": [
   {
    "sport": "tennis",
-   "t": 1795237200,
+   "t": 1795267800,
    "state": "pre",
-   "title": "TBD-Zverev",
+   "title": "Shelto-Alcaraz",
    "round": "SF",
-   "tour": "ATP Finals",
-   "tbc": true
+   "tour": "ATP Finals"
   },
   {
    "sport": "tennis",
-   "t": 1795237200,
+   "t": 1795289400,
    "state": "pre",
-   "title": "Shelton-TBD",
+   "title": "Medvede-Zverev",
    "round": "SF",
-   "tour": "ATP Finals",
-   "tbc": true
+   "tour": "ATP Finals"
   },
   {
    "sport": "tennis",
@@ -32,35 +30,26 @@
  "games": [
   {
    "sport": "tennis",
-   "t": 1795180200,
-   "state": "post",
-   "full": "Cobolli 6 - Alcaraz 3",
-   "round": "Gro",
+   "t": 1795267800,
+   "state": "pre",
+   "full": "Shelton 4 - Alcaraz 3",
+   "round": "SF",
    "tour": "ATP Finals"
   },
   {
    "sport": "tennis",
-   "t": 1795203000,
+   "t": 1795289400,
    "state": "pre",
-   "full": "Tiafoe 8 - Medvedev 5",
-   "round": "Gro",
+   "full": "Medvedev 5 - Zverev 1",
+   "round": "SF",
    "tour": "ATP Finals"
   },
   {
    "sport": "tennis",
-   "t": 1795237200,
+   "t": 1795323600,
    "state": "pre",
-   "full": "TBD - Zverev 1",
-   "round": "SF",
-   "tour": "ATP Finals",
-   "tbc": true
-  },
-  {
-   "sport": "tennis",
-   "t": 1795237200,
-   "state": "pre",
-   "full": "Shelton 4 - TBD",
-   "round": "SF",
+   "full": "TBD - TBD",
+   "round": "F",
    "tour": "ATP Finals",
    "tbc": true
   }
