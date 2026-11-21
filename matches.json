@@ -1,5 +1,5 @@
 {
- "updated": 1795276780,
+ "updated": 1795297011,
  "matches": [
   {
    "sport": "tennis",
@@ -11,20 +11,19 @@
   },
   {
    "sport": "tennis",
-   "t": 1795289400,
-   "state": "pre",
+   "t": 1795290300,
+   "state": "post",
    "title": "Medvede-Zverev",
    "round": "SF",
    "tour": "ATP Finals"
   },
   {
    "sport": "tennis",
-   "t": 1795323600,
+   "t": 1795366800,
    "state": "pre",
-   "title": "Alcaraz-TBD",
+   "title": "Alcaraz-Zverev",
    "round": "F",
-   "tour": "ATP Finals",
-   "tbc": true
+   "tour": "ATP Finals"
   }
  ],
  "games": [
@@ -38,20 +37,19 @@
   },
   {
    "sport": "tennis",
-   "t": 1795289400,
-   "state": "pre",
+   "t": 1795290300,
+   "state": "post",
    "full": "Medvedev 5 - Zverev 1",
    "round": "SF",
    "tour": "ATP Finals"
   },
   {
    "sport": "tennis",
-   "t": 1795323600,
+   "t": 1795366800,
    "state": "pre",
-   "full": "Alcaraz 3 - TBD",
+   "full": "Alcaraz 3 - Zverev 1",
    "round": "F",
-   "tour": "ATP Finals",
-   "tbc": true
+   "tour": "ATP Finals"
   }
  ]
 }
