@@ -1,5 +1,5 @@
 {
- "updated": 1795311533,
+ "updated": 1795386315,
  "matches": [
   {
    "sport": "tennis",
@@ -19,8 +19,8 @@
   },
   {
    "sport": "tennis",
-   "t": 1795366800,
-   "state": "pre",
+   "t": 1795367700,
+   "state": "post",
    "title": "Alcaraz-Zverev",
    "round": "F",
    "tour": "ATP Finals"
@@ -29,8 +29,8 @@
  "games": [
   {
    "sport": "tennis",
-   "t": 1795366800,
-   "state": "pre",
+   "t": 1795367700,
+   "state": "post",
    "full": "Alcaraz 3 - Zverev 1",
    "round": "F",
    "tour": "ATP Finals"
