@@ -1,5 +1,5 @@
 {
- "updated": 1795297011,
+ "updated": 1795311533,
  "matches": [
   {
    "sport": "tennis",
@@ -27,22 +27,6 @@
   }
  ],
  "games": [
-  {
-   "sport": "tennis",
-   "t": 1795268400,
-   "state": "post",
-   "full": "Shelton 4 - Alcaraz 3",
-   "round": "SF",
-   "tour": "ATP Finals"
-  },
-  {
-   "sport": "tennis",
-   "t": 1795290300,
-   "state": "post",
-   "full": "Medvedev 5 - Zverev 1",
-   "round": "SF",
-   "tour": "ATP Finals"
-  },
   {
    "sport": "tennis",
    "t": 1795366800,
