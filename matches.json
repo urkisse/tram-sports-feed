@@ -1,22 +1,5 @@
 {
- "updated": 1795402808,
- "matches": [
-  {
-   "sport": "tennis",
-   "t": 1795290300,
-   "state": "post",
-   "title": "Medvede-Zverev",
-   "round": "SF",
-   "tour": "ATP Finals"
-  },
-  {
-   "sport": "tennis",
-   "t": 1795367700,
-   "state": "post",
-   "title": "Alcaraz-Zverev",
-   "round": "F",
-   "tour": "ATP Finals"
-  }
- ],
+ "updated": 1795436138,
+ "matches": [],
  "games": []
 }
