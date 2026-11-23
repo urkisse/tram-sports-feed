@@ -1,14 +1,6 @@
 {
- "updated": 1795386315,
+ "updated": 1795402808,
  "matches": [
-  {
-   "sport": "tennis",
-   "t": 1795268400,
-   "state": "post",
-   "title": "Shelto-Alcaraz",
-   "round": "SF",
-   "tour": "ATP Finals"
-  },
   {
    "sport": "tennis",
    "t": 1795290300,
@@ -26,14 +18,5 @@
    "tour": "ATP Finals"
   }
  ],
- "games": [
-  {
-   "sport": "tennis",
-   "t": 1795367700,
-   "state": "post",
-   "full": "Alcaraz 3 - Zverev 1",
-   "round": "F",
-   "tour": "ATP Finals"
-  }
- ]
+ "games": []
 }
