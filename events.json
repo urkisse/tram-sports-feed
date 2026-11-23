@@ -1,22 +1,14 @@
 {
- "updated": 1794808928,
+ "updated": 1795413732,
  "events": [
   {
-   "sport": "tennis",
-   "t": 1794697200,
-   "end": 1795388340,
-   "title": "ATP Finals",
-   "sub": "Turin",
-   "place": "Inalpi Arena, Turin"
-  },
-  {
    "sport": "dota2",
-   "t": 1794870000,
+   "t": 1795129200,
    "end": 1795993140,
    "title": "BLAST Slam 9",
    "sub": "Dota 2 - online, final TBD",
    "lq": "BLAST Slam",
-   "prize": "USD 1M"
+   "place": "Online"
   },
   {
    "sport": "padel",
@@ -41,7 +33,7 @@
    "t": 1796166000,
    "end": 1797202740,
    "title": "DreamLeague S30",
-   "sub": "Dota 2 - dates unconfirmed",
+   "sub": "Dota 2 - online",
    "lq": "DreamLeague Season 30",
    "place": "Online",
    "prize": "USD 750K"
@@ -50,7 +42,7 @@
    "sport": "boxing",
    "t": 1796515200,
    "title": "Benavidez v Cieslak",
-   "sub": "Cruiser unification - Glendale",
+   "sub": "Cruiser unification - Phoenix",
    "tbc": true
   },
   {
@@ -60,20 +52,13 @@
    "title": "Premier Padel Finals",
    "sub": "Barcelona",
    "fip": "https://www.padelfip.com/events/premier-padel-finals-2026/",
-   "place": "Barcelona"
+   "place": "Palau Sant Jordi, BCN"
   },
   {
    "sport": "boxing",
-   "t": 1797037200,
+   "t": 1796986800,
    "title": "Fury v Joshua",
    "sub": "Heavyweight - Cardiff",
-   "tbc": true
-  },
-  {
-   "sport": "boxing",
-   "t": 1797073200,
-   "title": "Bivol v Smith",
-   "sub": "Light heavy - Yekaterinburg",
    "tbc": true
   },
   {
@@ -85,6 +70,13 @@
    "lq": "PGL Major",
    "place": "Singapore",
    "prize": "USD 1.25M"
+  },
+  {
+   "sport": "boxing",
+   "t": 1797678000,
+   "title": "Haney v Paro",
+   "sub": "Welter unification - San Fran",
+   "tbc": true
   }
  ]
 }
